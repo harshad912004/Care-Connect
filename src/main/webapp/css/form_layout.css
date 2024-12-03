@@ -1,0 +1,77 @@
+.logo {
+	width: 11%;
+	margin-left: 20px;
+}
+
+.form-container {
+	padding: 20px;
+	margin: auto;
+	width: 80%;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(41, 75, 227, 0.836);
+}
+
+.form-heading {
+	color: #62b6cb;
+	margin-bottom: 20px;
+}
+
+.form-form {
+	display: flex;
+	flex-direction: column;
+}
+
+h2 {
+	color: #62b6cb;
+	text-align: center;
+}
+
+label {
+	margin-bottom: 10px;
+}
+
+input,
+select {
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #62b6cb;
+	border-radius: 5px;
+}
+
+input,
+textarea {
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #62b6cb;
+	border-radius: 5px;
+}
+
+textarea {
+	padding: 20px;
+}
+
+button {
+	background-color: #62b6cb;
+	color: white;
+	padding: 12px;
+	margin: auto;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #4b8ca5;
+}
+
+.forgot-password,
+.register {
+	margin-bottom: 10px;
+	padding: 8px;
+}
+
+.forgot-password a,
+.register a {
+	text-decoration: none;
+	color: #62b6cb;
+}
