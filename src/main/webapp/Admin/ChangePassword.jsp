@@ -25,28 +25,28 @@
 
 	</div>
 	    
-	    <script>
-		    const passwordForm = document.getElementById("passwordForm");
-		    const newPassword = document.getElementById("new_password");
-		    const confirmPassword = document.getElementById("cnew_password");
-		    const errorMessage = document.getElementById("errorMessage");
-		    const submitButton = document.querySelector("button[type='submit']");
-		
-		    function checkPasswords()
-		    {
-				if (newPassword.value !== confirmPassword.value)
-				{
-			        errorMessage.innerText = "Password do not match to New Password";
-			        submitButton.disabled = true;  // Disable submit button if mismatch
-				}
-				else
-				{
-					errorMessage.innerText = "";
-					submitButton.disabled = false; // Enable submit button if match
-				}
-		    }
-		
-		    confirmPassword.addEventListener("keyup", checkPasswords);  // Call check on keyup
+	<script>
+		const passwordForm = document.getElementById("passwordForm");
+		const newPassword = document.getElementById("new_password");
+		const confirmPassword = document.getElementById("cnew_password");
+		const errorMessage = document.getElementById("errorMessage");
+		const submitButton = document.querySelector("button[type='submit']");
+	
+		function checkPasswords()
+		{
+			if (newPassword.value !== confirmPassword.value)
+			{
+				errorMessage.innerText = "Password do not match to New Password";
+				submitButton.disabled = true;  // Disable submit button if mismatch
+			}
+			else
+			{
+				errorMessage.innerText = "";
+				submitButton.disabled = false; // Enable submit button if match
+			}
+		}
+	
+		confirmPassword.addEventListener("keyup", checkPasswords);  // Call check on keyup
 		</script>
   
 </body>
