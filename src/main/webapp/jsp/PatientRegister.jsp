@@ -1,120 +1,102 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.List"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="eng">
-	<head>
-		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Care Connect | Parent Registration Page</title>
-		<link rel="stylesheet" href="css/navigation_layout.css">
-	</head>
-	<body>
-		<!-- navigation bar -->
-	    <nav class="navigation_bar">
-	        <div class="navigation_buttons">
-	            <img class="navigation_image" src="images/Logo1.png" alt="Care Connect Logo">
-	            <ul class="ul_navigation_buttons">
-	                <li class="li_navigation_buttons">
-						<a href="index.html" class="a_navigation_buttons">HOME</a></li>
-	            </ul>
-	        </div>
-	    </nav>
-	    
-	    <!-- registration form -->
-	    <div class="patient_register_main_form">
-	    	<form class="patient_register_form" action="PatientRegistrationServlet" method="post">
-	    		<h1 class="h1_patient_register_form">Patient Registration Form</h1>
-	    		
-	    		<%-- Retrieve and display error messages (if any) --%>
-				<% List<String> errors = (List<String>) request.getAttribute("errors"); %>
-				<%
-					if (errors != null && !errors.isEmpty())
-					{
-				%>
-				  		<ul class="error-messages">
-				<%
-						for (String error : errors)
-						{
-				%>
-				      		<li style="color: red;"><%= error %></li>
-				<%
-						}
-				%>
-						</ul>
-				<%
-					}
-				%>
-				
-				<%-- Retrieve and display Success messages (if any) --%>
-				<% String success_msg = (String) request.getAttribute("successMessage"); %>
-				<%
-					if (success_msg != null && !success_msg.isEmpty())
-					{
-				%>
-				  		<p style="color: green;"><%= success_msg %></p>
-				<%
-					}
-				%>
-				
-				<label class="label_patient_register_form" for="username">Your Name:</label>
-	            <input class="name_input_patient_register_form" type="text" id="username" name="username" placeholder="Enter full name" pattern="[a-zA-Z ]+" required>
-	
-	            <label class="label_patient_register_form" for="email">Your Email:</label>
-	            <input class="input_patient_register_form" type="email" id="email" name="email" placeholder="Enter valid email address" required>
-	
-	            <label class="label_patient_register_form" for="phone">Your Phone Number:</label>
-	            <input class="input_patient_register_form" type="tel" id="phone" name="phone" placeholder="Enter 10 digit phone number" maxlength="10" pattern="[1-9]{1}[0-9]{9}" required>
-	
-	            <label class="label_patient_register_form" for="password">Your Password:</label>
-	            <input class="input_patient_register_form" type="password" id="password" name="password" placeholder="Enter password" required>
-	
-	            <label class="label_patient_register_form" for="address">Your Address:</label>
-	            <input class="input_patient_register_form" type="text" id="address" name="address" placeholder="Enter address" required>
-	
-	            <label class="label_patient_register_form" for="dob">Your Date of Birth:</label>
-	            <input class="input_patient_register_form" type="date" id="dob" name="dob" required>
-	
-	            <label class="label_patient_register_form" for="gender">Select Your Gender:</label>
-	            <select class="input_patient_register_form" id="gender" name="gender" required>
-	                <option value="Male">Male</option>
-	                <option value="Female">Female</option>
-	            </select>
-	
-	            <label class="label_patient_register_form" for="blood-group">Select Your Blood Group:</label>
-	            <select class="input_patient_register_form" id="blood-group" name="blood_group" required>
-	                <option value="A+">A+</option>
-	                <option value="A-">A-</option>
-	                <option value="B+">B+</option>
-	                <option value="B-">B-</option>
-	                <option value="AB+">AB+</option>
-	                <option value="AB-">AB-</option>
-	                <option value="O+">O+</option>
-	                <option value="O-">O-</option>
-	            </select>
-	            
-	            <button class="button_patient_register_form" type="submit">Register Now</button>
-	    	</form>
-	    </div>
-	    
-	    <script type="text/javascript">
-		    // for birth date to set current date as max date
-		    document.addEventListener("DOMContentLoaded", function() {
-		        var dateInput = document.getElementById("dob");
-		        dateInput.addEventListener('focus', function() {
-		            setCurrentDateTimeAsMin(this.value);
-		        });
-		        dateInput.addEventListener('keyup', function() {
-		            setCurrentDateTimeAsMin(this.value);
-		        });
-		        dateInput.addEventListener('click', function() {
-		            setCurrentDateTimeAsMin(this.value);
-		        });
-		    });
+<html lang="en">
 
-			// Function to set current date and time as min
-			function setCurrentDateTimeAsMin() {			   
-				const today = new Date().toISOString().slice(0, 10); // Get YYYY-MM-DD
-				document.getElementById("dob").setAttribute("max", today);
-			}
-    	</script>
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Care Connect | Patient Registration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-50 font-sans text-gray-800">
+
+  <!-- Top Contact Info -->
+  <div class="bg-blue-100 text-right py-2 px-3 text-sm font-semibold">
+    careconnect247@gmail.com | +91 0253-987654
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-10">
+    <div class="container mx-auto py-2 px-4 flex justify-between items-center">
+      <img src="../images/Logo1.png" alt="Care Connect Logo" class="h-20" />
+      <ul class="flex space-x-6 text-blue-700 font-semibold text-xl">
+        <li><a href="../index.html" class="hover:text-blue-500">Home</a></li>
+        <li><a href="../about.html" class="hover:text-blue-500">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Registration Form -->
+  <section class="flex justify-center py-12 px-4">
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-2xl">
+      <h2 class="text-3xl font-bold text-blue-700 text-center mb-6">Patient Registration</h2>
+
+      <form action="RegisterServlet" method="post" class="space-y-6">
+        <!-- Name -->
+        <div>
+          <label for="name" class="block mb-1 font-medium text-gray-700">Full Name</label>
+          <input type="text" id="name" name="name" required
+            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 shadow-sm" />
+        </div>
+
+        <!-- Age -->
+        <div>
+          <label for="age" class="block mb-1 font-medium text-gray-700">Age</label>
+          <input type="number" id="age" name="age" required min="0"
+            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 shadow-sm" />
+        </div>
+
+        <!-- Gender -->
+        <div>
+          <label for="gender" class="block mb-1 font-medium text-gray-700">Gender</label>
+          <select id="gender" name="gender" required
+            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 shadow-sm">
+            <option value="" disabled selected>Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block mb-1 font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email" required
+            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 shadow-sm" />
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label for="password" class="block mb-1 font-medium text-gray-700">Password</label>
+          <input type="password" id="password" name="password" required
+            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 shadow-sm" />
+        </div>
+
+        <!-- Confirm Password -->
+        <div>
+          <label for="confirmPassword" class="block mb-1 font-medium text-gray-700">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required
+            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 shadow-sm" />
+        </div>
+
+        <!-- Submit -->
+        <div>
+          <button type="submit"
+            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition font-semibold">
+            Register
+          </button>
+        </div>
+      </form>
+
+      <!-- Optional: Login redirect -->
+      <p class="mt-6 text-sm text-center text-gray-600">
+        Already have an account?
+        <a href="../LoginServlet?action=loginForm" class="text-blue-600 hover:underline font-semibold">Login here</a>
+      </p>
+    </div>
+  </section>
+
+</body>
+
 </html>
