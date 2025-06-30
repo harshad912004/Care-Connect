@@ -2,194 +2,191 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Care Connect | About Page</title>
-	<link rel="stylesheet" href="css/navigation_layout.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+	</style>
 </head>
 
-<body>
+<body class="bg-white text-gray-800 font-sans">
 
-	<!-- navigation bar -->
-	<nav class="navigation_bar">
-		<div class="navigation_buttons">
-			<img class="navigation_image" src="images/Logo1.png" alt="Care Connect Logo">
-			<ul class="ul_navigation_buttons">
-				<li class="li_navigation_buttons">
-					<a href="index.html" class="a_navigation_buttons">HOME</a>
-				</li>
+	<!-- Top Contact Info -->
+	<div class="bg-blue-100 text-right py-2 px-3 text-sm font-semibold">
+		careconnect247@gmail.com | +91 0253-987654
+	</div>
+
+	<!-- Navbar -->
+	<nav class="bg-white shadow-md sticky top-0 z-10">
+		<div class="container mx-auto py-2 flex justify-between items-center">
+			<img src="images/Logo1.png" alt="Care Connect Logo" class="h-24" />
+			<ul class="flex space-x-6 text-blue-700 font-semibold">
+				<li><a href="index.html" class="hover:text-blue-500 text-2xl">Home</a></li>
+				<li><a href="LoginServlet?action=loginForm" class="hover:text-blue-500 text-2xl">Login</a></li>
 			</ul>
 		</div>
 	</nav>
 
-	<!--welcome message for users-->
-	<h1 class="h1_welcome_message">"Revolutionizing Healthcare: Your Gateway to Smart, Seamless Care!"</h1>
-	<h2 class="h2_welcome_message">Explore our features below!</h2>
+	<!-- Welcome Section -->
+	<section class="text-center py-12 bg-white">
+		<h2 class="text-red-500 text-2xl md:text-4xl font-bold mb-4">"Revolutionizing Healthcare: Your Gateway to Smart, Seamless Care!"</h2>
+		<h2 class="text-green-500 text-lg md:text-2xl text-gray-600">Explore our features below!</h2>
+	</section>
 
-	<!-- hospital image & info -->
-	<div class="about_main_image_information">
-		<img class="about_main_image" src="images/Hospital.png" alt="Care Connect Image">
-		<div class="about_main_information">
-			<h1 class="about_information_heading">CARE CONNECT</h1>
-			<p>
-				At Care Connect, our vision is to be the most well-regarded health-care provider in India, committed to the highest standards of clinical excellence and patient care,
+	<!-- Hospital Image and Info -->
+	<section class="flex flex-col md:flex-row items-center justify-center px-6 py-6">
+		<img src="images/Hospital.png" alt="Hospital"
+			class="max-w-md md:max-w-xl w-full mb-6 md:mb-0 md:mr-10 rounded-lg shadow-md" />
+		<div class="text-center md:text-left max-w-xl">
+			<h1 class="text-3xl font-bold text-blue-700 mb-2">CARE CONNECT</h1>
+			<p class="text-gray-700 leading-relaxed">
+				At Care Connect, our vision is to be the most well-regarded healthcare provider in India, committed to the highest standards of clinical excellence and patient care, 
 				supported by the latest technology and cutting-edge research.<br><br>
 				We ask more of ourselves, so we can give more to our patients.<br><br>
 				We push the boundaries of excellence in everything we do, so we can deliver the highest standards in patient-centered care.<br><br>
 				Every day we come to honor a higher purpose - To Serve. To Excel.
 			</p>
 		</div>
-	</div>
+	</section>
 
-	<br>
-	<div class="line"></div><br>
+	<hr class="my-10 border-gray-400" />
 
-	<!-- department heading -->
-	<p class="departments_heading">OUR DEPARTMENTS</p>
+	<!-- Departments Section -->
+	<section class="px-6 py-8 bg-gray-50">
+		<h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-blue-700">Our Departments</h2>
+		<div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+			<!-- Repeat this card -->
+			<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+				<img src="images/cardiology_icon.png" alt="Cardiology" class="h-16 mx-auto mb-4" />
+				<h3 class="text-xl font-semibold">Intervention Cardiology</h3>
+				<p class="text-gray-600 mt-2 text-sm">We provide an all-inclusive program for the management of heart
+					diseases like Angiography, Angioplasty, or Coronary Artery Bypass.</p>
+			</div>
 
-	<div class="main_departments">
-		<!-- Box 1 -->
-		<div class="departments_boxes">
-			<img class="departments_images" src="images/cardiology_icon.png" alt="Box 1 Image">
+			<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+				<img src="images/nephrology_icon.png" alt="Nephrology" class="h-16 mx-auto mb-4" />
+				<h3 class="text-xl font-semibold">Nephrology</h3>
+				<p class="text-gray-600 mt-2 text-sm">We believe in informed patient care. Our team tackles the rising
+					cases of kidney disease effectively and compassionately.</p>
+			</div>
+
+			<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+				<img src="images/dermatology_icon.png" alt="Dermatology" class="h-16 mx-auto mb-4" />
+				<h3 class="text-xl font-semibold">Dermatology & Cosmetology</h3>
+				<p class="text-gray-600 mt-2 text-sm">Experienced dermatologists treating patients with expertise, care,
+					and advanced procedures.</p>
+			</div>
+
+			<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+				<img src="images/neurology_icon.png" alt="Neurology" class="h-16 mx-auto mb-4" />
+				<h3 class="text-xl font-semibold">Neurology</h3>
+				<p class="text-gray-600 mt-2 text-sm">Advanced care in Neurology, Neurosurgery, and Interventional
+					Neuroradiology by leading doctors.</p>
+			</div>
+
+			<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+				<img src="images/oncology_icon.png" alt="Oncology" class="h-16 mx-auto mb-4" />
+				<h3 class="text-xl font-semibold">Surgical Oncology</h3>
+				<p class="text-gray-600 mt-2 text-sm">Customized treatment programs that combine modalities for best
+					patient outcomes.</p>
+			</div>
+
+			<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+				<img src="images/physician_icon.png" alt="Physician" class="h-16 mx-auto mb-4" />
+				<h3 class="text-xl font-semibold">General Physician</h3>
+				<p class="text-gray-600 mt-2 text-sm">Non-surgical care for diverse medical conditions from expert
+					general physicians.</p>
+			</div>
+		</div>
+	</section>
+
+	<hr class="my-10 border-gray-400" />
+
+	<!-- Specialists Section -->
+	<section class="px-6 py-8 bg-white">
+		<h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-blue-700">Our Specialists</h2>
+
+		<div class="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 text-center">
+			<div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+				<img src="images/doctor1.png" alt="Dr. Harshil Patel" class="h-32 mx-auto mb-2 rounded-full" />
+				<p class="font-semibold">Dr. Harshil Patel</p>
+				<p class="text-sm text-gray-600">MBBS, MD<br>Cardiologist</p>
+			</div>
+			<div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+				<img src="images/doctor2.png" alt="Dr. Dhruv Shah" class="h-32 mx-auto mb-2 rounded-full" />
+				<p class="font-semibold">Dr. Dhruv Shah</p>
+				<p class="text-sm text-gray-600">MBBS, MD<br>Neurologist</p>
+			</div>
+			<div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+				<img src="images/doctor3.png" alt="Dr. Seema Jadhav" class="h-32 mx-auto mb-2 rounded-full" />
+				<p class="font-semibold">Dr. Seema Jadhav</p>
+				<p class="text-sm text-gray-600">MBBS, MD<br>Pediatrics</p>
+			</div>
+			<div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+				<img src="images/doctor4.png" alt="Dr. Neema Sathe" class="h-32 mx-auto mb-2 rounded-full" />
+				<p class="font-semibold">Dr. Neema Sathe</p>
+				<p class="text-sm text-gray-600">MBBS, MD<br>Psychiatrist</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="bg-blue-100 text-center py-8 mt-12 text-sm">
+		<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 px-4 text-left">
 			<div>
-				<h2 class="departments_headings">Intervention Cardiology</h2>
-				<p class="departments_information">
-					We provide an all-inclusive program for the management of heart
-					diseases like Angiography, Angioplasty, or Coronary Artery Bypass.
-				</p>
+				<h3 class="font-bold text-blue-700 mb-2">Contact Us</h3>
+				<p>Care Connect<br>Nashik, Maharashtra, India<br>+91 98765 43210<br>careconnect247@gmail.com</p>
 			</div>
-		</div>
-		<!-- Box 2 -->
-		<div class="departments_boxes">
-			<img class="departments_images" src="images/nephrology_icon.png" alt="Box 2 Image">
 			<div>
-				<h2 class="departments_headings">Nephrology</h2>
-				<p class="departments_information">
-					We all know that kidney disease is on the rise in our country as well as in the world.
-					At APNA Hospital, we believe in informed patient care.
-				</p>
+				<h3 class="font-bold text-blue-700 mb-2">Working Hours</h3>
+				<p>Mon–Sat: 24/7<br>Sunday: 9AM–3PM (Doctors)<br>Special Cases: 24/7 Available</p>
 			</div>
-		</div>
-		<!-- Box 3 -->
-		<div class="departments_boxes">
-			<img class="departments_images" src="images/dermatology_icon.png" alt="Box 3 Image">
 			<div>
-				<h2 class="departments_headings">Dermatology and Cosmetology</h2>
-				<p class="departments_information">
-					APNA Hospital consists of a team of dermatologists who are practicing in the field of dermatology
-					for years and perform their best to treat the patients.
-				</p>
+				<h3 class="font-bold text-blue-700 mb-2">Why Choose Us?</h3>
+				<p>- One-stop healthcare<br>- 24/7 Ambulance<br>- Top Doctors<br>- Multiple Treatment Options</p>
 			</div>
-		</div>
-		<!-- Box 4 -->
-		<div class="departments_boxes">
-			<img class="departments_images" src="images/neurology_icon.png" alt="Box 4 Image">
 			<div>
-				<h2 class="departments_headings">Neurology</h2>
-				<p class="departments_information">
-					At APNA Hospital, the doctors provide cutting-edge care in Neurology, Neurosurgery, and
-					Interventional Neuroradiology.
-				</p>
+				<h3 class="font-bold text-blue-700 mb-2">Useful Links</h3>
+				<a href="index.html" class="text-blue-800 hover:underline block">Home</a>
+				<a href="about.html" class="text-blue-800 hover:underline block">About</a>
 			</div>
 		</div>
-		<!-- Box 5 -->
-		<div class="departments_boxes">
-			<img class="departments_images" src="images/oncology_icon.png" alt="Box 5 Image">
-			<div>
-				<h2 class="departments_headings">Surgical Oncology</h2>
-				<p class="departments_information">
-					Modalities are combined to create a treatment program that is appropriate for the patient and tumor
-					characteristics.
-				</p>
-			</div>
-		</div>
-		<!-- Box 6 -->
-		<div class="departments_boxes">
-			<img class="departments_images" src="images/physician_icon.png" alt="Box 6 Image">
-			<div>
-				<h2 class="departments_headings">General Physician</h2>
-				<p class="departments_information">
-					General Physicians provide non-surgical health care to patients suffering from various illnesses.
-				</p>
-			</div>
-		</div>
-	</div>
-
-	<br><br>
-	<div class="line"></div><br>
-
-	<!-- doctor team heading -->
-	<p class="specialists_heading">OUR SPECIALISTS</p>
-
-	<div class="main_specialists">
-		<div class="specialists_boxes">
-			<img class="specialists_images" src="images/doctor1.png" alt="Image 1">
-			<div class="specialists_information">
-				<b>Dr. Harshil Patel</b><br>MBBS, MD<br>Cardiologist
-			</div>
-		</div>
-		<div class="specialists_boxes">
-			<img class="specialists_images" src="images/doctor2.png" alt="Image 2">
-			<div class="specialists_information">
-				<b>Dr. Dhruv Shah</b><br>MBBS, MD<br>Neurologist
-			</div>
-		</div>
-		<div class="specialists_boxes">
-			<img class="specialists_images" src="images/doctor3.png" alt="Image 3">
-			<div class="specialists_information">
-				<b>Dr. Seema Jadhav</b><br>MBBS, MD<br>Pediatrics
-			</div>
-		</div>
-		<div class="specialists_boxes">
-			<img src="images/doctor4.png" alt="Image 4">
-			<div class="specialists_information">
-				<b>Dr. Neema Sathe</b><br>MBBS, MD<br>Psychiatrist
-			</div>
-		</div>
-	</div>
-
-	<!--footer section-->
-	<footer class="about_footer">
-		<div class="about_footer_boxes">
-			<!-- Box 1 -->
-			<div class="about_footer_main_boxes">
-				<h1 class="about_footer_boxes_headings">Contact Us:</h1>
-				<p class="about_footer_boxes_information">
-					<hr>Care Connect
-					<br>Nashik, Maharashtra, India
-					<br>+91 98765 43210
-					<br>careconnect247@gmail.com
-				</p>
-			</div>
-			<!-- Box 2 -->
-			<div class="about_footer_main_boxes">
-				<h1 class="about_footer_boxes_headings">Working Hours:</h1>
-				<p class="about_footer_boxes_information">
-					<hr>Monday-Saturday: 24/7 Available
-					<br>Sunday: 9 AM - 3 PM (Doctors), 24/7 Available
-					<br>Special Cases: 24/7 Available
-				</p>
-			</div>
-			<!-- Box 3 -->
-			<div class="about_footer_main_boxes">
-				<h1 class="about_footer_boxes_headings">Why Choose Us?:</h1>
-				<p class="about_footer_boxes_information">
-					<hr>- All healthcare facilities can be accessed here under one roof, making Care Connect a one-point contact for all your healthcare needs.
-					<br><br>- 24/7 Ambulance Support
-					<br>- Eminent and Experienced Doctors
-					<br>- Multiple Options For Treatment
-				</p>
-			</div>
-			<!-- Box 4 -->
-			<div class="about_footer_main_boxes">
-				<h1 class="about_footer_boxes_headings">Useful Links:</h1>
-				<p class="about_footer_boxes_information">
-					<hr>
-					> <a href="index.html" style="color: white; text-decoration: none;">HOME</a><br>
-					> <a href="About.html" style="color: white; text-decoration: none;">ABOUT</a><br>
-				</p>
-			</div>
-		</div>
+		<br>
+		<p class="mt-6 text-gray-700">© 2024 Care Connect. All rights reserved.</p>
 	</footer>
 
+	<!-- Back to Top Button -->
+	<button id="backToTop"
+		class="hidden fixed bottom-6 right-6 z-50 bg-blue-600 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300"
+		aria-label="Back to Top">↑ Top
+	</button>
+
+	<!-- Back to Top Button -->
+	<script>
+		const backToTopBtn = document.getElementById("backToTop");
+
+		// Show button on scroll
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 300) {
+				backToTopBtn.classList.remove("hidden");
+			} else {
+				backToTopBtn.classList.add("hidden");
+			}
+		});
+
+		// Smooth scroll to top
+		backToTopBtn.addEventListener("click", () => {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+		});
+	</script>
+
 </body>
+
 </html>
